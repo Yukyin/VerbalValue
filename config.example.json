@@ -1,0 +1,106 @@
+{
+  "_comment": "Schema for the VerbalValue reranking and generation pipeline. All values below are placeholders. The values used in the deployed system are tuned proprietary configuration and are not included in this repository. Fill in your own values to reproduce a deployment, or use these as a starting point for your own tuning.",
+  "generation": {
+    "_comment": "Decoding parameters. The temperature, top_p, repetition_penalty, and num_candidates values reported as public in the paper may be used directly; see the paper's experimental setup section.",
+    "max_new_tokens": null,
+    "temperature": null,
+    "top_p": null,
+    "repetition_penalty": null,
+    "no_repeat_ngram_size": null,
+    "num_candidates": null
+  },
+  "dialogue": {
+    "_comment": "Number of recent dialogue turns included in the prompt context.",
+    "history_turns": null
+  },
+  "diversity": {
+    "_comment": "Controls for detecting and penalising repeated or near-duplicate responses across turns.",
+    "recent_window": null,
+    "signature_length": null,
+    "signature_window": null,
+    "signature_repeat_penalty": null,
+    "near_duplicate_threshold": null,
+    "near_duplicate_penalty": null,
+    "near_duplicate_scale": null
+  },
+  "reranking": {
+    "_comment": "Weights and penalties used by pick_best_candidate. Lower total score is better; relevance_weight controls how strongly topical relevance is rewarded.",
+    "relevance_weight": null,
+    "banned_phrase_penalty": null,
+    "placeholder_id_penalty": null,
+    "placeholder_code_penalty": null,
+    "other_product_name_penalty": null,
+    "unmatched_ingredient_mention_penalty": null,
+    "unmatched_ingredient_mention_cap": null,
+    "product_name_match_bonus": null,
+    "product_name_miss_penalty": null,
+    "product_type_match_bonus": null,
+    "usage_terms_missing_penalty": null,
+    "short_response_threshold": null,
+    "short_response_penalty": null
+  },
+  "completeness": {
+    "_comment": "Bonuses/penalties for whether a candidate populates the structured schema and falls within a reasonable spoken-line length.",
+    "two_plus_lines_bonus": null,
+    "one_line_bonus": null,
+    "ideal_length_min": null,
+    "ideal_length_max": null,
+    "ideal_length_bonus": null,
+    "too_short_length": null,
+    "too_short_penalty": null
+  },
+  "relevance": {
+    "_comment": "Formula constants for relevance_score(). score_min/score_max define the output range.",
+    "keyword_coverage_scale": null,
+    "keyword_score_max": null,
+    "tag_score_no_tags_default": null,
+    "keyword_weight": null,
+    "tag_weight": null,
+    "no_hit_with_tags_cap": null,
+    "score_min": null,
+    "score_max": null
+  },
+  "product_matching": {
+    "_comment": "Thresholds and weights for matching a viewer comment to a product-knowledge-base entry.",
+    "min_score": null,
+    "category_weight": null,
+    "coverage_weight": null,
+    "name_keyword_bonus": null,
+    "name_keyword_topn": null
+  },
+  "banned_phrases": [
+    "_comment: list of stock phrases the model has overfit to and should avoid repeating; populate with your own deployment-specific list"
+  ],
+  "text": {
+    "_comment": "Structural slicing limits and length thresholds (number of items shown, minimum keyword length, etc.).",
+    "keyword_min_length": null,
+    "short_comment_length": null,
+    "context_skin_types_topn": null,
+    "context_concerns_topn": null,
+    "context_ingredients_topn": null,
+    "context_talking_points_topn": null,
+    "speak_lines_full_bonus_count": null,
+    "speak_lines_partial_bonus_count": null
+  },
+  "format": {
+    "_comment": "Regex pattern matching internal catalogue identifiers that must not leak into spoken output, e.g. an 'X' or 'P' prefix followed by digits.",
+    "internal_id_pattern": null
+  },
+  "service": {
+    "_comment": "Service-level defaults (ports, polling intervals, buffer sizes).",
+    "idle_poll_seconds": null,
+    "repeat_buffer_size": null,
+    "default_port": null,
+    "idle_cycle_marker": null,
+    "error_exit_code": null
+  },
+  "client": {
+    "_comment": "Timing constants for local_website/client_runtime.js.",
+    "IDLE_POLL_MS": null,
+    "RESUME_IDLE_AFTER_MS": null,
+    "REPLY_SUSPEND_IDLE_MS": null,
+    "ABORT_WATCHER_POLL_MS": null,
+    "CHAT_BASE": "",
+    "SPEAK_BASE": ""
+  }
+}

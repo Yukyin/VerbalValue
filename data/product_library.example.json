@@ -1,0 +1,63 @@
+{
+  "catalog_name": "example-skincare-catalog",
+  "version": "0.0.0-example",
+  "products": [
+    {
+      "product_id": "X001",
+      "name": "Example Gentle Cleanser",
+      "type": "cleanser",
+      "key_ingredients": [
+        {
+          "name": "Example Amino Surfactant",
+          "role": "gentle cleansing",
+          "notes": "Mild cleansing agent suitable for sensitive and dry skin"
+        },
+        {
+          "name": "Glycerin",
+          "role": "hydration",
+          "notes": "Classic humectant that helps retain moisture"
+        },
+        {
+          "name": "Panthenol",
+          "role": "soothing",
+          "notes": "Soothing and supportive of barrier repair"
+        }
+      ],
+      "texture": "low-foam gel",
+      "suitable_for": {
+        "skin_types": [
+          "normal",
+          "dry",
+          "combination-dry",
+          "sensitive (tolerant)"
+        ],
+        "concerns": [
+          "tight feeling after cleansing",
+          "seasonal dryness",
+          "mild redness"
+        ],
+        "age_groups": [
+          "adult"
+        ]
+      },
+      "not_recommended_for": [
+        "very oily skin seeking a deep-cleansing formula"
+      ],
+      "usage": {
+        "how_to": "Lather in wet hands and massage gently, then rinse with lukewarm water",
+        "frequency": "Once or twice daily; dry or sensitive skin may cleanse with water only in the morning and use cleanser in the evening"
+      },
+      "live_talking_points": [
+        "Built around a mild amino-acid surfactant, does not strip skin after rinsing",
+        "A good entry-level cleanser for dry or sensitive skin types",
+        "Pairs well with the example moisturiser in this catalogue"
+      ],
+      "compliance_disclaimer": "Patch test recommended before first use on sensitive skin."
+    }
+  ],
+  "ingredient_glossary": {
+    "Example Amino Surfactant": "A mild cleansing agent derived from amino acids, generally well tolerated by dry and sensitive skin.",
+    "Glycerin": "A common humectant that helps the skin retain moisture.",
+    "Panthenol": "A form of vitamin B5 used for soothing and supporting skin barrier repair."
+  }
+}
