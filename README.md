@@ -1,4 +1,4 @@
-# VerbalValue (open-source reference implementation)
+# VerbalValue
 
 This repository contains a sanitized, reference implementation of the
 core architecture described in *VerbalValue: A Socially Intelligent
